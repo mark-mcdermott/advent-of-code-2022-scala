@@ -2,16 +2,16 @@
 
 import scala.io.Source
 
-object RunDay1Rough extends App {
+object RunDay1 extends App {
   val inputFile = "src/main/input/day1.txt"
   val input = Source.fromFile(inputFile).getLines().mkString("\n")
-  val day1Part1 = new Day1Rough
-  val day1Part2 = new Day1Rough
+  val day1Part1 = new Day1
+  val day1Part2 = new Day1
   println("part 1: " + day1Part1.getMax(day1Part1.sumLists(day1Part1.getLists(input))))
   println("part 2: " + day1Part2.sumTop3(day1Part2.sumLists(day1Part2.getLists(input))))
 }
 
-class Day1Rough {
+class Day1 {
   var lists = List.newBuilder[List[Int]]
   var list = List.newBuilder[Int]
 

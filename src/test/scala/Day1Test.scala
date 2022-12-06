@@ -4,10 +4,10 @@ import org.scalatest.matchers.should.Matchers.{convertToAnyShouldWrapper, equal}
 import scala.List
 import scala.io.Source
 
-class Day1RoughTest extends AnyFunSuite {
+class Day1Test extends AnyFunSuite {
 
   test("getLists: just List(1,2)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input1 =
     """1
 2
@@ -17,7 +17,7 @@ class Day1RoughTest extends AnyFunSuite {
   }
 
   test("getLists: List(1,2) and List(3,4)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input2 =
       """1
 2
@@ -30,7 +30,7 @@ class Day1RoughTest extends AnyFunSuite {
   }
 
   test("sumLists: just List(1,2)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input1 =
       """1
 2
@@ -40,7 +40,7 @@ class Day1RoughTest extends AnyFunSuite {
   }
 
   test("sumLists: List(1,2) and List(3,4)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input2 =
       """1
 2
@@ -54,7 +54,7 @@ class Day1RoughTest extends AnyFunSuite {
 
 
   test("getMax: List(1,2)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input2 =
       """1
 2
@@ -64,7 +64,7 @@ class Day1RoughTest extends AnyFunSuite {
   }
 
   test("getMax: List(1,2) and List(3,4)") {
-    val day1 = new Day1Rough
+    val day1 = new Day1
     val input2 =
       """1
 2
