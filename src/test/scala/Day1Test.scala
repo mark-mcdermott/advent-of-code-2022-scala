@@ -1,9 +1,6 @@
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers.{convertToAnyShouldWrapper, equal}
 
-import scala.List
-import scala.io.Source
-
 class Day1Test extends AnyFunSuite {
 
   test("getLists: just List(1,2)") {
