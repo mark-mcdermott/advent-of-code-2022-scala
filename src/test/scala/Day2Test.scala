@@ -27,7 +27,6 @@ class Day2Test extends AnyFunSuite {
 
   val twoLines = """A Z
 A Y"""
-
   val sevenLines = """A Z
 A Y
 B X
@@ -35,8 +34,11 @@ B X
 C X
 B X
 A X"""
-
-
   test("scoreSum: first two lines") { day2.scoreSumFromThemAndMeInput(twoLines) should equal(11) }
   test("scoreSum: first seven lines") { day2.scoreSumFromThemAndMeInput(sevenLines) should equal(25) }
+
+  test("scoreSumFromThemAndResultInput: A X") { day2.scoreSumFromThemAndResultInput("A X") should equal(3) }
+  test("scoreSumFromThemAndResultInput: first two lines") { day2.scoreSumFromThemAndResultInput(twoLines) should equal(12) } // 8 + 4
+  test("scoreSumFromThemAndResultInput: first seven lines") { day2.scoreSumFromThemAndResultInput(sevenLines) should equal(20) } // 8,4,1,1,2,1,3
+
 }

@@ -6,6 +6,7 @@ object RunDay2 extends App {
   val input = Source.fromFile(inputPath).getLines().mkString("\n")
   val day2 = new Day2
   println("part 1: " + day2.scoreSumFromThemAndMeInput(input)) // 11150
+  println("part 2: " + day2.scoreSumFromThemAndResultInput(input))
 
 }
 
@@ -70,15 +71,15 @@ class Day2 {
     scoresList.result().sum
   }
 
-  def scoreSumFromThemAndResultInput(input: String): Int = {
-    val lineIterator = input.linesIterator
-    // TODO: here create new them & me input string by iterating over the them & result input with gameStringFromThemAndResult()
-    val scoresList = List.newBuilder[Int]
+  def scoreSumFromThemAndResultInput(themAndResultInput: String): Int = {
+    val lineIterator = themAndResultInput.linesIterator
+    val themAndMeList = List.newBuilder[String]
     for (line <- lineIterator) {
-      val score = gameScore(line)
-      scoresList += score
+      val themAndMeString = gameStringFromThemAndResult(line)
+      themAndMeList += themAndMeString
     }
-    scoresList.result().sum
+    val themAndMeInputString = themAndMeList.result().mkString("\n")
+    scoreSumFromThemAndMeInput(themAndMeInputString)
   }
 
 }
