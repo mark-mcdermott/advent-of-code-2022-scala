@@ -6,7 +6,7 @@ object RunDay6 extends App {
   val input = Source.fromFile(inputPath).getLines().mkString("\n")
   val day6 = new Day6
   println("part1: " + day6.part1GetFourUniqueIndex(input)) // 1855
-
+  println("part2: " + day6.part2GetFourteenUniqueIndex(input)) // 3256
 }
 
 class Day6() {
@@ -57,7 +57,7 @@ class Day6() {
         val substring11 = fourteenChars.substring(0,10) + fourteenChars.substring(11, 14)
         val substring12 = fourteenChars.substring(0,11) + fourteenChars.substring(12, 14)
         val substring13 = fourteenChars.substring(0,12) + fourteenChars(13)
-        val substring14 = fourteenChars.substring(0,14)
+        val substring14 = fourteenChars.substring(0,13)
 
         val c1 = fourteenChars(0)
         val c2 = fourteenChars(1)

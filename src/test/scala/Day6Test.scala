@@ -40,5 +40,13 @@ class Day6Test extends AnyFunSuite {
     val day6 = new Day6
     day6.part2GetFourteenUniqueIndex("abcdefghijklmn") should equal(14)
   }
+  test("part2GetFourteenUniqueIndex: abcdefghijklmno") {
+    val day6 = new Day6
+    day6.part2GetFourteenUniqueIndex("abcdefghijklmno") should equal(14)
+  }
+  test("part2GetFourteenUniqueIndex: aabcdefghijklmno") {
+    val day6 = new Day6
+    day6.part2GetFourteenUniqueIndex("aabcdefghijklmno") should equal(15)
+  }
 
 }
